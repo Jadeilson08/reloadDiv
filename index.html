@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Recarrega apenas uma parte do HTML</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+        setInterval("my_function();",5000);
+        function my_function(){
+            $('#refresh').load(location.href + ' #time');
+        }
+    </script>
+</head>
+<body>
+	<p>... aqui vai todo o codigo HTML que faz seu site...</p>
+	<div class="container">
+		<div id="refresh">
+			<div id="time">
+				<p>Recarregando o conteúdo da div...</p>
+				<script type="text/javascript">
+					console.log(Math.random());
+				</script>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
